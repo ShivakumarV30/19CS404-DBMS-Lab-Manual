@@ -47,123 +47,150 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/27bd2cd1-855f-4b4f-99a2-c5adb0c958b9)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+UPDATE suppliers set supplier_name=UPPER(supplier_name) where contact_person like '%Singh%';
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/92fccbd0-7733-4b83-80ad-2aaf89a18419)
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/378cb935-145e-43b6-97ea-baf8e9780dd5)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+update suppliers set supplier_name="A1 Suppliers" where supplier_id=8;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/399239fd-6458-4b96-a44f-c31e77501fa6)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/f896aea0-c243-4767-8e68-f4fdea4ab6fd)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+update sales set sell_price=sell_price+0.05*sell_price where sale_date='2023-01-31';
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/28dfc2e9-be4e-4255-b3bf-8307c4772fc0)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/7ee5079b-8001-401d-aa54-8c94ce677255)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+delete from Customer  where WORKING_AREA is 'New York';
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/311bfeea-ff3e-4e91-9318-3f1a4835033c)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+
 
 ```sql
--- Paste your SQL code below for Question 5
+delete from Customer
+where (GRADE>2 and PAYMENT_AMT<(select AVG(PAYMENT_AMT) from customer))
+ OR OUTSTANDING_AMT>8000;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/916f9d2d-f3a0-4146-8cd7-fcd9f774d12a)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/3356fa63-34c5-413d-86a0-5db8fb637e7d)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+delete from customer where grade<2;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/d2c3a1da-d08d-4088-aed4-1d18ef7b2446)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/c74fffe7-eb38-438d-935e-ffe731a84fb3)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+select categoryName,description from categories order by categoryName;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/9d0408e2-4733-4113-8aac-f5162bd9ca03)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/5ed3ce37-7413-4041-9d82-11770e9bf32e)
 
 ```sql
--- Paste your SQL code below for Question 8
+select id,value1,
+CASE
+WHEN value1>0 THEN 'Positive'
+WHEN value1<0 then 'Negative'
+Else 'Zero'
+END AS value_status
+FROM Calculations;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/a9e1960e-5dd3-4825-a2d4-160332077c05)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/3db39298-1d08-4d7e-9af8-de4c19633161)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+select customer_id,cust_name,city,grade,salesman_id from customer
+where city="New York" or grade>200;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/0fa837f8-d9ac-4353-b4ee-6bc47ff20f55)
 
-![Output9](output.png)
 
 **Question 10**
 ---
--- Paste Question 10 here
+-![image](https://github.com/user-attachments/assets/96d6137e-0f3c-4ef7-a05a-18596e8116ad)
 
 ```sql
--- Paste your SQL code below for Question 10
+select product_id,original_price,discount_percentage,
+original_price-original_price*discount_percentage as discounted_price
+from Products;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/b9ceb64c-ffad-49bd-99ca-e81c2c18ef7f)
+
+## GRADES:
+![image](https://github.com/user-attachments/assets/ae28d673-7714-4b7b-b525-e498ecc33e52)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
