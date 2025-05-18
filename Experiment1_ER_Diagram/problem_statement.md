@@ -70,6 +70,6 @@ Enrollment (Many-to-Many, Total Participation from Student, Partial Participatio
 The Billing extension adds a new entity with attributes like Billing ID, Student ID, Total Amount, Billing Date, and Payment Status. It has a one-to-many relationship with the Student entity—each student can have multiple billing records. This relationship shows total participation from Billing and partial participation from Student, allowing effective tracking of student payments.
 
 ## Design Choices:
-Brief explanation of why you chose certain entities, relationships, and assumptions
-
+I chose the entities Student, Instructor, Course, and Enrollment because they represent the essential components of a university system. Students and instructors need to be uniquely identified and linked to courses, while courses store academic details. The Enrollment entity was added to handle the many-to-many relationship between students and courses and to track enrollment dates. The University relationship connects all entities under one system. Assumptions include each student and instructor having a unique ID, students enrolling in multiple courses, and instructors not directly linked to courses in this version. These choices ensure a clear, functional academic data model.
 ## RESULT
+Successfully completed the ER diagram for the hospital database scenario, including all necessary entities, relationships, attributes, constraints, and billing logic as required.
