@@ -48,23 +48,26 @@ Design a database for patient management, appointments, medical records, and bil
 # ER Diagram Submission - Student Name
 
 ## Scenario Chosen:
-University / Hospital (choose one)
+University
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
+![Screenshot 2025-05-18 174008](https://github.com/user-attachments/assets/f84922ca-7d2a-409c-b50b-55144fac7317)
+
 
 ## Entities and Attributes:
-- Entity1: Attributes
-- Entity2: Attributes
+Student: Name, Date of Birth, Admission ID, Phone Number<br>
+Instructor: Staff Name, Staff Number, Phone Number, Staff E-mail<br>
+Course: Course Number, Course Name, Course Credit, Course Units<br>
+Enrollment: Student ID, Student Enrolled Course, Date of Enrolment<br>
 ...
 
 ## Relationships and Constraints:
-- Relationship1 (Cardinality, Participation)
-- Relationship2 (Cardinality, Participation)
+University (One-to-Many, Total Participation from Student, Instructor, and Course)<br>
+Enrollment (Many-to-Many, Total Participation from Student, Partial Participation from Course)<br>
 ...
 
-## Extension (Prerequisite / Billing):
-- Explain how you modeled prerequisites or billing.
+## Extension (Billing):
+The Billing extension adds a new entity with attributes like Billing ID, Student ID, Total Amount, Billing Date, and Payment Status. It has a one-to-many relationship with the Student entity—each student can have multiple billing records. This relationship shows total participation from Billing and partial participation from Student, allowing effective tracking of student payments.
 
 ## Design Choices:
 Brief explanation of why you chose certain entities, relationships, and assumptions
